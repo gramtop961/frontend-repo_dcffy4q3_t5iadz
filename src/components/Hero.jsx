@@ -17,7 +17,7 @@ export default function Hero() {
               transition={{ duration: 0.8 }}
               className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900"
             >
-              Advanced ICT and Technology Solutions
+              Insyver Technologies (OPC) Pvt. Ltd.
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -25,7 +25,7 @@ export default function Hero() {
               transition={{ delay: 0.15, duration: 0.8 }}
               className="mt-6 text-lg leading-7 text-slate-700 max-w-2xl"
             >
-              We design, build, and scale secure digital platforms. From cloud-native architectures to AI-powered automation, our teams deliver measurable outcomes for modern enterprises.
+              Transforming businesses through intelligent technology solutions. Your trusted partner for digital excellence in Gurgaon and beyond.
             </motion.p>
 
             <motion.div
@@ -35,16 +35,16 @@ export default function Hero() {
               className="mt-8 flex flex-wrap gap-3"
             >
               <a
-                href="#solutions"
+                href="#services"
                 className="inline-flex items-center justify-center rounded-md bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow transition hover:opacity-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
               >
-                Explore Solutions
+                Explore Services
               </a>
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center rounded-md bg-white/80 backdrop-blur px-5 py-3 text-sm font-semibold text-slate-900 ring-1 ring-slate-200 hover:bg-white transition"
               >
-                Request a Demo
+                Start Your Digital Transformation
               </a>
             </motion.div>
           </div>

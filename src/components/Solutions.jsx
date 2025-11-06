@@ -1,48 +1,66 @@
 import { Shield, Cloud, Cpu, BarChart3 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const items = [
+const services = [
   {
-    icon: Shield,
-    title: 'Cybersecurity & Zero Trust',
+    icon: Cpu,
+    title: 'Enterprise Network & ICT Infrastructure',
     desc:
-      'Comprehensive security programs with continuous monitoring, threat modeling, SOC integration, and zero-trust access controls.',
+      'Robust networking solutions, data centers, and ICT infrastructure designed for scalability and reliability.',
+    bullets: ['Network Design', 'Data Centers', 'Infrastructure Setup'],
   },
   {
     icon: Cloud,
-    title: 'Cloud & Platform Engineering',
+    title: 'Cloud Solutions & Hosting',
     desc:
-      'Cloud-native architectures, Kubernetes, platform SRE, and cost-efficient multi-cloud strategies designed for scale and reliability.',
+      'Comprehensive cloud migration, hosting services, and multi-cloud strategies for modern businesses.',
+    bullets: ['Cloud Migration', 'Multi-Cloud Strategy', 'Hosting Services'],
   },
   {
-    icon: Cpu,
-    title: 'AI, Data & Automation',
+    icon: Shield,
+    title: 'Cybersecurity & Ethical Hacking',
     desc:
-      'Intelligent data pipelines, MLOps, and automation frameworks that accelerate decisions and improve operational efficiency.',
+      'Advanced security auditing, penetration testing, and comprehensive cybersecurity solutions.',
+    bullets: ['Security Auditing', 'Penetration Testing', 'Threat Assessment'],
   },
   {
     icon: BarChart3,
-    title: 'Digital Transformation',
+    title: 'Web & Mobile App Development',
     desc:
-      'Service design, product acceleration, and change enablement that modernizes legacy stacks and unlocks new growth channels.',
+      'Custom web applications, mobile apps, and digital platforms built with cutting-edge technologies.',
+    bullets: ['Custom Web Apps', 'Mobile Development', 'Digital Platforms'],
+  },
+  {
+    icon: BarChart3,
+    title: 'Data Analytics & ERP/CRM Solutions',
+    desc:
+      'Business intelligence, data analytics, and integrated ERP/CRM systems for data-driven decisions.',
+    bullets: ['Business Intelligence', 'Data Analytics', 'ERP/CRM Integration'],
+  },
+  {
+    icon: Cpu,
+    title: 'Managed IT Services & Consultancy',
+    desc:
+      '24/7 IT support, strategic consultancy, and managed services to optimize your technology infrastructure.',
+    bullets: ['24/7 IT Support', 'Strategic Consulting', 'Infrastructure Management'],
   },
 ];
 
 export default function Solutions() {
   return (
-    <section id="solutions" className="relative py-24 bg-white">
+    <section id="services" className="relative py-24 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">
-            Our Solutions
+            Comprehensive Digital Solutions
           </h2>
           <p className="mt-4 text-slate-700">
-            We partner with leading enterprises to architect secure, intelligent systems that deliver real business outcomes.
+            From infrastructure to applications, we provide end-to-end technology solutions that drive innovation and business growth.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {items.map((item, idx) => (
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((item, idx) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 16 }}
@@ -56,7 +74,14 @@ export default function Solutions() {
               </div>
               <h3 className="mt-4 text-lg font-semibold text-slate-900">{item.title}</h3>
               <p className="mt-2 text-sm leading-6 text-slate-600">{item.desc}</p>
-              <a href="#contact" className="mt-4 inline-block text-sm font-medium text-indigo-700 hover:text-indigo-900">Learn more →</a>
+              <ul className="mt-4 space-y-1 text-sm text-slate-700">
+                {item.bullets.map((b) => (
+                  <li key={b} className="flex items-start gap-2">
+                    <span className="mt-1 h-1.5 w-1.5 rounded-full bg-indigo-600" /> {b}
+                  </li>
+                ))}
+              </ul>
+              <a href="#contact" className="mt-4 inline-block text-sm font-medium text-indigo-700 hover:text-indigo-900">Learn More →</a>
             </motion.div>
           ))}
         </div>

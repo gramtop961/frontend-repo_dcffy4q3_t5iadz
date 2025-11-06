@@ -9,20 +9,19 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simple mailto fallback to ensure button is functional without backend
-    const subject = encodeURIComponent('Demo Request from ' + form.name);
+    const subject = encodeURIComponent('Inquiry from ' + form.name);
     const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
-    window.location.href = `mailto:hello@flames-ict.example?subject=${subject}&body=${body}`;
-    setStatus('We opened your email client. If it did not open, please email us at hello@flames-ict.example');
+    window.location.href = `mailto:info@insyvertechnologies.com?subject=${subject}&body=${body}`;
+    setStatus('We opened your email client. If it did not open, please email us at info@insyvertechnologies.com');
   };
 
   return (
     <section id="contact" className="relative py-24 bg-gradient-to-b from-white to-slate-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">Request a Demo</h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">Contact Us</h2>
           <p className="mt-4 text-slate-700">
-            Tell us about your objectives. Our experts will reach out with a tailored walkthrough.
+            Tell us about your objectives. Our experts will reach out with a tailored walkthrough within 24 hours.
           </p>
         </div>
 
@@ -68,7 +67,7 @@ export default function Contact() {
                 type="submit"
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-gradient-to-r from-indigo-600 to-blue-600 px-5 py-3 text-sm font-semibold text-white shadow hover:opacity-95 active:opacity-90 transition"
               >
-                <Send size={16} /> Send Request
+                <Send size={16} /> Send Message
               </button>
               {status && <p className="text-sm text-slate-600">{status}</p>}
             </div>
@@ -76,14 +75,12 @@ export default function Contact() {
 
           <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
             <div className="prose prose-slate max-w-none">
-              <h3>Engagement Approach</h3>
-              <p>
-                Strategy workshops, architecture assessments, proof-of-value pilots, and enterprise-scale delivery led by senior practitioners.
-              </p>
-              <h3>Compliance</h3>
-              <p>
-                ISO 27001-aligned controls, data residency planning, and governance that meets enterprise and regulatory requirements.
-              </p>
+              <h3>Why Work With Us</h3>
+              <ul>
+                <li>Certified experts across cloud, security, and application engineering</li>
+                <li>Transparent delivery and measurable outcomes</li>
+                <li>Enterprise-grade governance and compliance</li>
+              </ul>
               <h3>Response Times</h3>
               <p>We respond within one business day.</p>
             </div>
